@@ -33,7 +33,6 @@ body {
 #content{
 	text-align: center;
 	overflow: auto;
-	height: 1000px;
 }
 
 input {
@@ -42,6 +41,9 @@ input {
 
 #list {
     color: white;
+    width: 25%;
+    height: 600px;
+    overflow-y: scroll;
 }
 
 #help {

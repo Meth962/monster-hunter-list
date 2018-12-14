@@ -6,7 +6,6 @@
 */
 
 var list = [];
-var materialobj = [];
 
 function addItem(name, qty){
     if(name.length == 0) return;
@@ -117,11 +116,11 @@ function safeString(str){
 function getMaterialID(name){
 	var i = null;
 	var result = "001";
-	for(i=0; materialobj.length > i; i += 1)
+	for(i=0; materials.length > i; i += 1)
 	{
-		if(name === materialobj[i].materialName)
+		if(name === materials[i].materialName)
 		{
-			result = materialobj[i].picID;
+			result = materials[i].picID;
 			break;
 		}
 	}

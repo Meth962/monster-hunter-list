@@ -14,13 +14,13 @@
 		<div id="header" class="image"></div>
 		<br/>
 		<div id="border">
-			
 		<div id="content">
 			<input id="input" type="text" maxlength="50" onclick="this.select();">
 			<input type="button" class="roundBtn addBtn" Value="+" onclick="addItem($('#input').val(), 1);">
 			<input type="button" class="roundBtn minusBtn" Value="-" onclick="removeItem($('#input').val(), 1);">
 			<input type="button" Value="Export..." onclick="download();">
-			<input type="file" accept=".json" onchange="upload(this.files[0]);" />
+			<input type="button" Value="Import..." onclick="document.getElementById('file').click();">
+			<input type="file" accept=".json" onchange="upload(this.files[0]);" hidden="hidden" id="file"/>
 				<div id="help">
 					Your browser will automatically save your list every time you change it.<br/>
 					However, each browser stores it's own local copy so be sure to use the same browser.<br/>
