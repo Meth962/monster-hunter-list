@@ -1,0 +1,16 @@
+{
+    "weapons":[],
+    "armors":[],
+    "charms":[
+        {"rarity":3,"name":"Artillery Charm I","effect":"Artillery + 1","materials":[{"item":"Anjanath Plate","qty":2},{"item":"Anjanath Fang","qty":3},{"item":"Warped Bone","qty":1},{"name":"Aquacore Ore","qty":1}]},
+        {"rarity":3,"name":"Artillery Charm II","effect":"Artillery + 2","materials":[{"item":"Anjanath Gem","qty":1},{"item":"Anjanath Fang+","qty":2},{"item":"Novacrystal","qty":1},{"name":"Spiritcore Ore","qty":1}]},
+        {"rarity":3,"name":"Artillery Charm III","effect":"Artillery + 3","materials":[{"item":"Teostra Gem","qty":1},{"item":"Teostra Horn+","qty":2},{"item":"Firecell Stone","qty":1},{"name":"Dreamcore Ore","qty":1}]},
+        {"rarity":3,"name":"Attack Charm I","effect":"Attack Boost + 1","materials":[{"item":"Sturdy Bone","qty":4},{"item":"Boulder Bone","qty":4},{"item":"Lightcrystal","qty":1},{"item":"Aquacore Ore","qty":1}]},
+        {"rarity":5,"name":"Awakening Charm I","effect":"Free Elem/Ammo Up + 1","materials":[{"item":"Zorah Magdaros Gem","qty":1},{"item":"Zorah Magdaros Magma","qty":5},{"item":"Dragonvein Crystal","qty":4},{"item":"Aquacore Ore","qty":1}]},
+        {"rarity":5,"name":"Blast Charm I","effect":"Blast Resistance + 1","materials":[{"item":"Dodogama Jaw","qty":1},{"item":"Dodogama Talon","qty":2},{"item":"Firecell Stone","qty":1},{"item":"Spiritcore Ore","qty":1}]},
+        {"rarity":5,"name":"Blast Coating Charm","effect":"Blast Functionality + 1","materials":[{"item":"Bazelgeuse Gem","qty":1},{"item":"Bazelgeuse Tail","qty":3},{"item":"Bazelgeuse Fuse","qty":3},{"item":"Dragoncore Ore","qty":1}]},
+        {"rarity":3,"name":"Blaze Charm I","effect":"Fire Attach + 1","materials":[{"item":"Anjanath Plate","qty":1},{"item":"Anjanath Fang","qty":2},{"item":"Warped Bone","qty":3},{"item":"Aquacore Ore","qty":1}]},
+        {"rarity":4,"name":"Bleed Charm I","effect":"Bleeding Resistance + 1","materials":[{"item":"Odogaron Plate","qty":1},{"item":"Odogaron Fang","qty":2},{"item":"Warped Bone","qty":4},{"item":"Aquacore Ore","qty":1}]},
+        {"rarity":3,"name":"Blessing Charm I","effect":"Divine Blessing + 1","materials":[{"item":"Paolumu Webbing","qty":2},{"item":"Paolumu Pelt","qty":3},{"item":"Coral Bone","qty":4},{"item":"Aquacore Ore","qty":1}]}
+    ]
+}
