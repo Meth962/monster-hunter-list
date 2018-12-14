@@ -20,7 +20,6 @@ body {
 
 #border {
 	background-color: rgba(0,0,0,0.67);
-	text-align: center;
 	overflow: auto;
 	left: -40px;
 	right: -40px;
@@ -31,7 +30,6 @@ body {
 }
 
 #content{
-	text-align: center;
 	overflow: auto;
 }
 
