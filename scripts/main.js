@@ -15,8 +15,10 @@ function addItem(name, qty){
     var index = list.findIndex(x => x.name == name);
     if(index >= 0)
         list[index].quantity += qty;
-    else
+    else{
         list.push({name: name, quantity: qty});
+        index = list.length-1;
+    }
     // update or add element
     var elem = $('#' + id + ' .itemQty')[0];
     //var elem = $(`.item[name=${name}] .itemQty`)[0];
@@ -60,23 +62,25 @@ function save(){
 
 function load(){
     list = JSON.parse(localStorage.getItem("mh-item-list"));
-	var request = new XMLHttpRequest();
-	request.open("GET","scripts/material.js", false);
-	request.send(null);
-	materialobj = JSON.parse(request.responseText);
+	//var request = new XMLHttpRequest();
+	//request.open("GET","scripts/material.js", false);
+	//request.send(null);
+	//materialobj = JSON.parse(request.responseText);
     refresh();
-    
 }
 
 function refresh(){
     if(list == null) list = [];
-    filter(list);
+    filter(list, []);
 }
 
-function filter(items){
+function filter(items,mats){
     $('.item').remove();
     items.forEach(i => {
         addItemElem(i.name, i.quantity);
+    });
+    mats.forEach(m => {
+        addItemElem(m.materialName, 0);
     });
 }
 
@@ -99,13 +103,14 @@ function upload(file){
     var reader = new FileReader();
     reader.onload = function(e) {
         list = JSON.parse(e.target.result);
+        save();
         refresh();
     }
     reader.readAsText(file);
 }
 
 function safeString(str){
-    return str.replace(/ /g,"-").replace("'","");
+    return str.replace(/ /g,"-").replace("'","").replace("+","plus");
 }
 
 function getMaterialID(name){

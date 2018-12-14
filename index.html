@@ -1,49 +1,49 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Monster Hunter World</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="content/Site.css"/>
-<script src="scripts/main.js"></script>
-	
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>Monster Hunter World</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="content/Site.css"/>
+		<script src="scripts/main.js"></script>
+		<script src="data/material.js"></script>
+	</head>
 
-<body onload="load();">
-	<div id="main">
-	<div id="header" class="image"></div>
-	<br/>
-	<div id="border">
-		
-	<div id="content">
-		<input id="input" type="text" maxlength="50" onclick="this.select();">
-        <input type="button" class="roundBtn addBtn" Value="+" onclick="addItem($('#input').val(), 1);">
-        <input type="button" class="roundBtn minusBtn" Value="-" onclick="removeItem($('#input').val(), 1);">
-        <input type="button" Value="Export..." onclick="download();">
-        <input type="file" accept=".json" onchange="upload(this.files[0]);" />
-			<div id="help">
-				Your browser will automatically save your list every time you change it.<br/>
-				However, each browser stores it's own local copy so be sure to use the same browser.<br/>
-				If you want to export your list, use the export button and save it as a file in your downloads.<br/>
-				You can then use it import the list via the "Choose File" or "Browse" buttons.
+	<body onload="load();">
+		<div id="main">
+		<div id="header" class="image"></div>
+		<br/>
+		<div id="border">
+			
+		<div id="content">
+			<input id="input" type="text" maxlength="50" onclick="this.select();">
+			<input type="button" class="roundBtn addBtn" Value="+" onclick="addItem($('#input').val(), 1);">
+			<input type="button" class="roundBtn minusBtn" Value="-" onclick="removeItem($('#input').val(), 1);">
+			<input type="button" Value="Export..." onclick="download();">
+			<input type="file" accept=".json" onchange="upload(this.files[0]);" />
+				<div id="help">
+					Your browser will automatically save your list every time you change it.<br/>
+					However, each browser stores it's own local copy so be sure to use the same browser.<br/>
+					If you want to export your list, use the export button and save it as a file in your downloads.<br/>
+					You can then use it to import the list via the "Choose File" or "Browse" buttons.
+				</div>
+				<div id="list"></div>
+				<script type="text/javascript">
+					$('#input').on('keyup change', function() {
+						var s = $(this).val().toLowerCase();
+						if(s.length == 0) {
+							refresh();
+							return;
+						}
+						if(s.length < 3) return;
+						var filtered = list.filter(x => x.name.toLowerCase().includes(s));
+						var mats = materials.filter(x => x.materialName.toLowerCase().includes(s));
+						filter(filtered, mats);
+					});
+				</script>
 			</div>
-			<div id="list"></div>
-			<script type="text/javascript">
-				$('#input').on('keyup change', function() {
-					var s = $(this).val();
-					if(s.length == 0) {
-						refresh();
-						return;
-					}
-					if(s.length < 3) return;
-					var filtered = list.filter(x => x.name.includes(s));
-					filter(filtered);
-				});
-			</script>
 		</div>
-	</div>
-	<div id="footer"></div>
-	</div>
-	
-</body>
+		<div id="footer"></div>
+		</div>
+	</body>
 </html>

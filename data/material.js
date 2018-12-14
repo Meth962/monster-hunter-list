@@ -1,5 +1,5 @@
-[
- {
+var materials = [
+  {
     "materialName": "Ancient Bone",
     "picID": "094"
   },
@@ -1323,4 +1323,4 @@
     "materialName": "Zorah Magdaros Ridge",
     "picID": "085"
   }
-]
+];

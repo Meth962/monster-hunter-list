@@ -1,28 +1,23 @@
-/* CSS Document */
-
-
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background-image: url("../img/monster-hunter-world.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 #header{
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
+
 #header.image{
 	content:url(../img/logo.png);
 	width: 300px;
 	height: 150px;
 }
 
-#main{
-	
-	
-}
 #border {
 	background-color: rgba(0,0,0,0.67);
 	text-align: center;
@@ -34,14 +29,14 @@ body {
     position: inherit;
 	z-index: 0;
 }
+
 #content{
 	text-align: center;
 	overflow: auto;
 	height: 1000px;
 }
+
 input {
-    height: 30px;
-    width: 250px;
     font-size: 1.4em;
 }
 
@@ -87,11 +82,13 @@ input {
 	width: 40px;
 	height: 30px;
 }
+
 .itemImg.img
 {
 	height: 30px;
 	width: 30px;
 }
+
 .item {
     width: 300px;
     height: 30px;
