@@ -87,7 +87,8 @@ function filter(items,mats){
 function addItemElem(name,qty){
     var id = safeString(name);
 	var picID = getMaterialID(name);
-	var imgSRC = "img/items/"+ picID +".png";
+    var imgSRC = "img/items/"+ picID +".png";
+    if(qty == 0) qty = "";
     $('#list').append(`<div id="${id}" class="item" onclick="select('${name}');"><div class="itemImg"><img src="${imgSRC}"/></div><div class="itemName">${name}</div><div class="itemQty">${qty}</div></div>`);
 }
 
