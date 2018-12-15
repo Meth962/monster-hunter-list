@@ -112,3 +112,8 @@ input {
 .selected {
     background: lightblue;
 }
+
+.splitter {
+    height: 3px;
+    background: lightblue;
+}

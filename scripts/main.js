@@ -61,10 +61,6 @@ function save(){
 
 function load(){
     list = JSON.parse(localStorage.getItem("mh-item-list"));
-	//var request = new XMLHttpRequest();
-	//request.open("GET","scripts/material.js", false);
-	//request.send(null);
-	//materialobj = JSON.parse(request.responseText);
     refresh();
 }
 
@@ -75,9 +71,11 @@ function refresh(){
 
 function filter(items,mats){
     $('.item').remove();
+    $('.splitter').remove();
     items.forEach(i => {
         addItemElem(i.name, i.quantity);
     });
+    $('#list').append('<div class="splitter"></div>')
     mats.forEach(m => {
         addItemElem(m.materialName, 0);
     });
