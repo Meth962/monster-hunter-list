@@ -46,6 +46,12 @@ function removeItem(name, qty){
     save();
 }
 
+function clearList(){
+    list = [];
+    save();
+    refresh();
+}
+
 function select(name){
     $('.item').removeClass('selected');
 

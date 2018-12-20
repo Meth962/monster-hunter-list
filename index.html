@@ -20,6 +20,7 @@
 			<input type="button" class="roundBtn minusBtn" Value="-" onclick="removeItem($('#input').val(), 1);">
 			<input type="button" Value="Export..." onclick="download();">
 			<input type="button" Value="Import..." onclick="document.getElementById('file').click();">
+			<input type="button" Value="Erase List" onclick="clearList();">
 			<input type="file" accept=".json" onchange="upload(this.files[0]);" hidden="hidden" id="file"/>
 				<div id="help">
 					Your browser will automatically save your list every time you change it.<br/>
