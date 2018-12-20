@@ -1,4 +1,4 @@
-[
+var materials = [
   {
     "materialName": "Ancient Bone",
     "picID": "094",
@@ -1303,7 +1303,7 @@
   },
   {
     "materialName": "Jyuratodus Shell",
-    "picID": "02",
+    "picID": "002",
     "location": "Jyuratodus(Reward) (??%)",
     "rarity": 4
   },
