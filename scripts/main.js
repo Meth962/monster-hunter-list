@@ -125,6 +125,10 @@ function getMaterialID(name){
 		if(name === materials[i].materialName)
 		{
 			result = materials[i].picID;
+			if(result === "")
+			{
+			   result = "001";
+			}
 			break;
 		}
 	}
