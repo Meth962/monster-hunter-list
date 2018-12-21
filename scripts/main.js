@@ -90,9 +90,13 @@ function filter(items,mats){
 function addItemElem(name,qty){
     var id = safeString(name);
 	var picID = getMaterialID(name);
+	var location = getMaterialLocation(name);
     var imgSRC = "img/items/"+ picID +".png";
     if(qty == 0) qty = "";
-    $('#list').append(`<div id="${id}" class="item" onclick="select('${name}');"><div class="itemImg"><img src="${imgSRC}"/></div><div class="itemName">${name}</div><div class="itemQty">${qty}</div></div>`);
+    $('#list').append(`<div id="${id}" class="item" data-tooltip-content="#${id}v2"><div class="itemImg"><img src="${imgSRC}"/></div><div class="itemName">${name}</div><div class="itemQty">${qty}</div><div class="tooltip_templates"><div id="${id}v2" >Location - ${id} <hr> ${location}</div></div></div>`);
+	//$('#'+id).click(function(){select(name);});
+	$(document).on('click','#'+id,function(){select(name);});
+	$(document).ready(function() {$('#'+id).tooltipster({side: 'left', trigger:'click'});});
 }
 
 function download() {
@@ -129,6 +133,20 @@ function getMaterialID(name){
 			{
 			   result = "001";
 			}
+			break;
+		}
+	}
+	return result;
+}
+
+function getMaterialLocation(name){
+	var i = null;
+	var result = "";
+	for(i=0; materials.length > i; i += 1)
+	{
+		if(name === materials[i].materialName)
+		{
+			result = materials[i].location;
 			break;
 		}
 	}

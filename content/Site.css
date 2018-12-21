@@ -1,6 +1,6 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	background-image: url("../img/monster-hunter-world.jpg");
+	background-image: url("../img/bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -33,8 +33,9 @@ body {
 	overflow: auto;
 }
 
-input {
+#input {
     font-size: 1.4em;
+	border-radius: 36px;
 }
 
 #list {
@@ -116,4 +117,53 @@ input {
 .splitter {
     height: 3px;
     background: lightblue;
+}
+
+.tooltip_templates { display: none; }
+
+#listBorder{
+	 width: 450px;
+    height: 600px;
+	border: 10px solid transparent;
+	border-image: url(../img/border2.png) 30 79 0 79 round;
+}
+
+.btn{
+	width: 100px;
+	height: 25px; 
+	text-align: center;
+	color:white;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 0 #000000, 4px 4px 0 #000000;
+	font-size: 20px;
+	border: 10px solid transparent;
+	border-image: url(../img/border2.png) 30 79 0 79 round;
+	display: inline-block;  
+	
+}
+
+#inputtext,#plus,#minus,#export,#import,#eraselist{
+	 display: inline-block;
+}
+#plus:hover
+{
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(64,255,105,0) 75%, rgba(0,255,55,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(64,255,105,0) 75%,rgba(0,255,55,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(64,255,105,0) 75%,rgba(0,255,55,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ff37',GradientType=0 ); /* IE6-9 */
+}
+
+#minus:hover
+{
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,64,64,0) 75%, rgba(255,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,64,64,0) 75%,rgba(255,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,64,64,0) 75%,rgba(255,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ff0000',GradientType=0 ); /* IE6-9 */
+}
+#export:hover,#import:hover,#eraselist:hover
+{
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }

@@ -4,7 +4,12 @@
 		<meta charset="utf-8">
 		<title>Monster Hunter World</title>
 		<link rel="stylesheet" type="text/css" href="content/Site.css"/>
-		<script src="scripts/jquery-1.7.1.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+		<!--<script src="scripts/jquery-1.7.1.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="//iamceege.github.io/tooltipster/dist/css/tooltipster.bundle.min.css" />
+    	<script type="text/javascript" src="//iamceege.github.io/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="data/material.js"></script>
 	</head>
@@ -15,20 +20,22 @@
 		<br/>
 		<div id="border">
 		<div id="content">
-			<input id="input" type="text" maxlength="50" onclick="this.select();">
-			<input type="button" class="roundBtn addBtn" Value="+" onclick="addItem($('#input').val(), 1);">
-			<input type="button" class="roundBtn minusBtn" Value="-" onclick="removeItem($('#input').val(), 1);">
-			<input type="button" Value="Export..." onclick="download();">
-			<input type="button" Value="Import..." onclick="document.getElementById('file').click();">
-			<input type="button" Value="Erase List" onclick="clearList();">
-			<input type="file" accept=".json" onchange="upload(this.files[0]);" hidden="hidden" id="file"/>
+			<div id=inputtext><input id="input" type="text" maxlength="50" onclick="this.select();"></div>
+			<div id="plus" onclick="addItem($('#input').val(), 1);"><div class="btn">Add</div></div>
+			<div id="minus"  onclick="removeItem($('#input').val(), 1);"><div class="btn">Remove</div></div>
+			<div id="export" onclick="download();"><div class="btn">Export</div></div>
+			<div id="import" onclick="document.getElementById('file').click();"><div class="btn">Import</div></div>
+			<div id="eraselist" onclick="clearList();"><div class="btn">Erase List</div></div>
+			<input type="file" accept=".json" onchange="upload(this.files[0]);" hidden="hidden" id="file" style="display: none;"/>
 				<div id="help">
 					Your browser will automatically save your list every time you change it.<br/>
 					However, each browser stores it's own local copy so be sure to use the same browser.<br/>
 					If you want to export your list, use the export button and save it as a file in your downloads.<br/>
 					You can then use it to import the list via the "Choose File" or "Browse" buttons.
 				</div>
+				<div id="listBorder">
 				<div id="list"></div>
+				</div>
 				<script type="text/javascript">
 					$('#input').on('keyup change', function() {
 						var s = $(this).val().toLowerCase();
@@ -46,5 +53,6 @@
 		</div>
 		<div id="footer"></div>
 		</div>
+		
 	</body>
 </html>
